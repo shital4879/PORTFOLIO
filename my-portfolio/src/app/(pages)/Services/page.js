@@ -1,11 +1,15 @@
+"use client";
 import React from "react";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 import WebAssetIcon from "@mui/icons-material/WebAsset";
+import Ex from "@/app/ex";
 
 export default function page() {
   return (
-    <div className="pt-10 pl-24 bg-black text-white w-dvw h-dvh">
+    <div className="bg-black">
+      <Ex/>
+    <div className="bg-black text-white w-dvw h-dvh mt-12 ml-14">
       <button className="pl-4 pr-4 pt-1 pb-1 bg-red-600 rounded text-white font-semibold">
         Service
       </button>
@@ -53,6 +57,7 @@ export default function page() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

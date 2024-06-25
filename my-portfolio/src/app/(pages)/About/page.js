@@ -1,12 +1,16 @@
+"use client";
+import Ex from "@/app/ex";
 import React from "react";
 
 export default function page() {
   return (
+    <div>
+      <Ex/>
     <div className="pl-20 pt-10 pr-32 bg-black text-white flex justify-between w-dvw h-dvh">
-      <div className="w-[100%]" >
-        
+      <div className="w-[100%] mt-20" >
+        <img src="./about.gif" className="rounded-full ml-28 w-[20rem] h-[20rem]"/>
       </div>
-      <div className="w-[100%] mt-40 ">
+      <div className="w-[100%] mt-24">
         <div className="pl-4 pr-4 w-24 pt-1 pb-1 bg-red-600 rounded text-white font-semibold">
           Discover
         </div>
@@ -24,6 +28,7 @@ export default function page() {
           to use my skills and experience to make a positive impact on the web.
         </p>
       </div>
+    </div>
     </div>
   );
 }
