@@ -1,17 +1,7 @@
 "use client";
 import Ex from "@/app/ex";
-import React from "react";
+import React, { useState } from "react";
 import Slideshow from "../Slideshow";
-
-// const cards = [
-//   {
-//     imageurl: "/booking.png",
-//     content:
-//       "Booking.com is an online platform that offers flexible booking options like flights and hotels. allowing travelers to easily search, compare, and book accommodations based on various criteriasuch as location, price, amenities.",
-//       featureName:'#React'
-//   },
-// ];
-
 
 const cards = [
   {
@@ -51,6 +41,8 @@ const cards = [
     content2:"#CSS",
   },
 ];
+
+
 
 export default function page() {
   return (

@@ -7,9 +7,9 @@ import Ex from "@/app/ex";
 
 export default function page() {
   return (
-    <div className="bg-black">
+    <div className="">
       <Ex/>
-    <div className="bg-black text-white w-dvw h-dvh mt-12 ml-14">
+    <div className="bg-black text-white w-dvw h-dvh pt-12 pl-14">
       <button className="pl-4 pr-4 pt-1 pb-1 bg-red-600 rounded text-white font-semibold">
         Service
       </button>

@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useEffect, useState } from 'react';
+
 
 
 export default function Slideshow({ cards}) {
@@ -29,26 +30,42 @@ export default function Slideshow({ cards}) {
     setCurrentIndex(prevIndex => (prevIndex === 0 ? cards.length - 1 : prevIndex - 1));
   };
 
+  // const{isHovered,setIsHovered} = useContext(newcontext);
 
+  // const handleMouseEnter = () => {
+  //   setIsHovered(true);
+  // };
+
+  // const handleMouseLeave = () => {
+  //   setIsHovered(false);
+  // };
 
 
   return (
   
         
 <div className="relative overflow-hidden pl-10 pr-10">
-      <div className=" flex transition-transform ease-in-out duration-500 -translate-x-[${currentIndex * (100 / 3)}%]">
+      <div   className=" flex transition-transform ease-in-out duration-500 -translate-x-[${currentIndex * (100 / 3)}%]">
         {cards.slice(currentIndex, currentIndex + 3).map((card, index) => (
           <div
             key={index}
             className="h-auto w-full md:w-1/3 flex items-center justify-center px-4 md:p-6 lg:p-8"
           >
-          <div className="bg-slate-950 pt-5 rounded-lg w-[18rem] h-[33rem] pb-4 pl-2 pr-2">
-            <div className=" flex justify-center items-center">
+          <div className="bg-slate-950 pt-5 rounded-lg 2xl:w-[18rem] 2xl:h-[33rem] xl:w-[18rem] xl:h-[33rem] pb-4 pl-2 pr-2">
+            <div className=" flex justify-center items-center"
+            //  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
+             >
               <img
                 src={card.imageUrl}
                 className="w-72 h-48 pl-2 pr-2 bg-gray-800 rounded-xl"
               />
+
             </div>
+                {/* {isHovered && (
+        <div className="absolute inset-0 bg-black bg-opacity-50 w-72 h-48 flex justify-center items-center transition-opacity duration-300">
+          <p className="text-white text-3xl font-bold">Visit</p>
+        </div>
+      )} */}
             <p className="text-white ml-4 pt-2 text-2xl font-semibold mt-2 mb-2 pl-2">
               {card.name}
             </p>
@@ -66,8 +83,8 @@ export default function Slideshow({ cards}) {
         ))}
       </div>
       <button className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-600 px-4 py-2 rounded-lg" onClick={prevSlide}>Prev</button>
-      <button className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-200 px-4 py-2 rounded-lg" onClick={nextSlide}>Next</button>
-    
+      <button className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-600 px-4 py-2 rounded-lg" onClick={nextSlide}>Next</button>
+
     </div>
   );
 };
