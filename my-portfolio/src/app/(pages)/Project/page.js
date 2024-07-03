@@ -8,7 +8,8 @@ const cards = [
     imageUrl: '/booking.png',
     name: " Booking.com clone",
     featureName: ' Booking.com is an online platform that offers flexible booking options like flights and hotels. allowing travelers to easily search, compare, and book accommodations based on various criteria such as location, price, amenities.',
-    content: '#React',
+    content1: '#React',
+    url:"https://booking-com-clone-react-project-1-uhks9mjjdr82.vercel.app/"
   },
   {
     imageUrl: '/reddit.png',
@@ -16,6 +17,7 @@ const cards = [
     featureName: '  Implemented essential functionalities, including user authentication, login/logout processes, post liking, search capabilities, commenting on posts. The platform showcases a user-friendly replica of a social media experience.',
     content1: "#React",
     content2:"#Tailwind css",
+    url:"https://reddit-react-clone-react-project-2-ozrv8hlh5hb0.vercel.app/"
    
   },
   {
@@ -24,7 +26,8 @@ const cards = [
     featureName: "ISRO Centers project is a dynamic web application designed to provide easy access to information about various ISRO centers.Users can search for any center by name or location.This interactive platform aims to appreciation of ISRO's significant contributions to space research and technology development.",
     content1: "#HTML",
     content2:"#CSS",
-    content3:"#JavaScript"
+    content3:"#JavaScript",
+    url:"https://isro-centres-javascript-project-an7hwfd6h8oh.vercel.app/"
   },
   {
     imageUrl: 'vadapav.png',
@@ -32,6 +35,7 @@ const cards = [
     featureName: 'My Vada Pav project is a comprehensive web application showcasing a variety of Vada Pav options with their respective prices and reviews. HTML structures the content and layout of the various Vadapav options, CSS styles ensure each item is presented attractively with customizable designs',
     content1: "#HTML",
     content2:"#CSS",
+    url:"https://vadapav-lake.vercel.app/"
   },
   {
     imageUrl: 'amazon.png',
@@ -39,6 +43,7 @@ const cards = [
     featureName: '  My Amazon clone project is a meticulously crafted replica of the popular e-commerce platform, developed purely with HTML and CSS. This project highlights my proficiency in leveraging HTML and CSS to create functional and visually appealing web applications.',
     content1: "#HTML",
     content2:"#CSS",
+    url:"https://amazon-clone-psi-green.vercel.app/"
   },
 ];
 

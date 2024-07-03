@@ -18,7 +18,7 @@ export default function Home({ Component, pageProps }) {
 
   return (
     <div
-      className="w-dvw h-dvh bg-black text-white "
+      className="w-dvw h-full bg-black text-white "
       //  style={{backgroundImage: "url('/1.jpg')"}}
     >
       <Ex/>
@@ -44,26 +44,26 @@ export default function Home({ Component, pageProps }) {
           <button className="pl-4 pr-4  rounded font-semibold border border-white cursor-pointer" onClick={()=>router.push("Contact")} >Hire me</button>
           {/* <hire /> */}
         </div>
-<div className="mt-8">
+<div className="mt-10 mb-8">
   <p>EXPLORE</p>
   <div className="mt-4 flex 2xl:space-x-10 xl:space-x-10 lg:space-x-6 md:space-x-3 sm:space-x-6">
-    <div className="" onClick={()=>router.push("Skill")}>
-      <img src="./skill.jpg" className="w-32 h-40 border border-gray-300 hover:scale-105   mb-1 transform transition-transform duration-500 hover:animate-pulse"/>
+    <div className="hover:animate-pulse cursor-pointer" onClick={()=>router.push("Skill")}>
+      <img src="./skill.jpg" className="w-32 h-40 border border-gray-300 hover:scale-105   mb-1 transform transition-transform duration-500 "/>
       <div className="flex text-center justify-center ">
         <p>Skill</p> </div>
     </div>
-    <div className="" onClick={()=>router.push("Education")}>
-      <img src="./edu.webp" className="w-32 h-40 border border-gray-300 hover:scale-105 mb-1 transform transition-transform duration-500 hover:animate-pulse"/>
+    <div className="hover:animate-pulse cursor-pointer" onClick={()=>router.push("Education")}>
+      <img src="./edu.webp" className="w-32 h-40 border border-gray-300 hover:scale-105 mb-1 transform transition-transform duration-500"/>
       <div className="flex text-center justify-center ">
         <p>Education</p> </div>
     </div>
-    <div className=""  onClick={()=>router.push("Project")}>
-      <img src="./project.jpg" className="w-32 h-40 border border-gray-300 hover:scale-105 mb-1 transform transition-transform duration-500 hover:animate-pulse "/>
+    <div className="hover:animate-pulse cursor-pointer"  onClick={()=>router.push("Project")}>
+      <img src="./project.jpg" className="w-32 h-40 border border-gray-300 hover:scale-105 mb-1 transform transition-transform duration-500 "/>
       <div className="flex text-center justify-center ">
         <p>Project</p> </div>
     </div>
-    <div className="" onClick={()=>router.push("Contact")}>
-      <img src="./co.jpg" className="w-32 h-40 border border-gray-300 hover:scale-105 mb-1 transform transition-transform duration-500 hover:animate-pulse"/>
+    <div className="hover:animate-pulse cursor-pointer" onClick={()=>router.push("Contact")}>
+      <img src="./co.jpg" className="w-32 h-40 border border-gray-300 hover:scale-105 mb-1 transform transition-transform duration-500"/>
       <div className="flex text-center justify-center ">
         <p>Contact</p> </div>
     </div>
@@ -72,12 +72,12 @@ export default function Home({ Component, pageProps }) {
 
         </div>
        
-        <div className="mt-12 2xl:ml-32 xl:ml-32 md:ml-10 flex justify-center mb-16">
+        <div className="mt-12 2xl:ml-32 xl:ml-32 md:ml-10 flex justify-center ">
           <img src="./profile.png"
            style={{
           animation:"move 5s linear infinite"
           }}
-          className="xl:h-80 xl:w-80 lg:h-80 lg:w-80 md:h-52 md:w-52"
+          className="2xl:[22rem] 2xl:w-[22rem] xl:h-80 xl:w-80 lg:h-80 lg:w-80 md:h-52 md:w-52"
           />
 
 <style jsx>{`
@@ -87,7 +87,7 @@ export default function Home({ Component, pageProps }) {
       transform: TranslateY(0);
     }
     50%{
-      transform: TranslateY(25px);
+      transform: TranslateY(30px);
     }
     100%{
       transform: TranslateY(0);

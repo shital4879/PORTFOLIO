@@ -7,7 +7,7 @@ export default function page() {
     <div>
       <Ex/>
    
-    <div className='pt-14 pl-20 pr-20 bg-black text-white w-dvw h-dvh'>
+    <div className='pt-14 pl-14 pr-20 bg-black text-white w-dvw h-dvh'>
    <button className="pl-4 pr-4 pt-1 pb-1 bg-red-600 rounded text-white font-semibold">
    Learning
       </button>

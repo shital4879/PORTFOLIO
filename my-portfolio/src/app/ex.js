@@ -1,18 +1,40 @@
 "use client";
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useRouter } from "next/navigation";
 
 export default function Ex() {
     const router = useRouter();
     const[open,setOpen] = useState(false);
+    const[active,setActive] = useState(1);
+
+    function handlebtn(value){
+      setActive(value)
+      sessionStorage.setItem("value",value);
+      if(value == 1)
+        {
+          router.push("/")
+        }
+        else if(value == 2){
+          router.push("About")
+        }
+        else if(value == 3){
+          router.push("Services")
+        }
+    }
+    useEffect(()=>{
+      if(sessionStorage.getItem("value")){
+         setActive(sessionStorage.getItem("value"));
+      }
+    },[])
+
   return (
     <div className='pl-14 pr-14  bg-black  w-dvw'>
       <div className="pt-5 flex justify-between">
         <div className="text-red-600 font-bold text-3xl">PORTFOLIO</div>
-        <div className="-ml-10 text-lg flex space-x-36 text-gray-300 border-b border-solid">
-          <div className="hover:scale-125 cursor-pointer" onClick={()=>router.push("/")}>Home</div>
-          <div onClick={()=>router.push("About")}>About</div>
-          <div onClick={()=>router.push("Services")}>Services</div>
+        <div className="-ml-10 text-lg flex 2xl:space-x-36 xl:space-x-36 lg:space-x-28 md:space-x-12 sm:space-x-7 space-x-4 text-gray-300 border-b border-solid">
+          <div className={` ${active == 1 ? "text-yellow-600 cursor-pointer":"cursor-pointer"} `} onClick={()=>handlebtn(1)}>Home</div>
+          <div onClick={()=>handlebtn(2)} className={`${active == 2 ? "text-yellow-600 cursor-pointer":"cursor-pointer"}`}>About</div>
+          <div onClick={()=>handlebtn(3)} className={`${active == 3 ? "text-yellow-600 cursor-pointer":"cursor-pointer"}`}>Services</div>
         </div>
 
         <div className="h-7 w-7 bg-gray-400 rounded-lg hover:animate-bounce" onClick={()=>setOpen(!open)}>
